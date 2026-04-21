@@ -37,6 +37,11 @@ app.add_middleware(
 )
 
 
+@app.get("/")
+def read_root():
+    return {"message": "Pelocal STT Backend is running on Hugging Face Spaces!"}
+
+
 @app.get("/health")
 def health() -> dict:
     return {"status": "ok"}
